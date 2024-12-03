@@ -17,7 +17,7 @@ for product in jewelry:
     product_name = product.find('h3', class_='name').text
     brand_name = 'Fashion'
     product_price = product.find('div', 'prc').text
-    product_discount = product.find('div', 'bdg _dsct _sm').text.strip()
+    product_discount = product.find('div', class_='bdg _dsct _sm').text
     product_revews = product.find('h2', class_='-fs14 -m -upp -ptm')
     product_rating = product.find('div', class_='stars _s').text.strip()
     data.append([product_name, brand_name, product_price, product_discount, product_revews, product_rating])
